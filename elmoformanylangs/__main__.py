@@ -264,6 +264,8 @@ def test_main():
         fout = handlers[output_format, output_layer]
         if output_layer == -1:
           payload = np.average(data, axis=0)
+        elif output_layer == -2:
+          payload = data
         else:
           payload = data[output_layer]
         if output_format == 'hdf5':
